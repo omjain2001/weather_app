@@ -1,4 +1,4 @@
-
+/*
 fetch("http://puzzle.mead.io/puzzle").then( (response) => {
     
     response.json().then((data) => {
@@ -14,6 +14,7 @@ fetch("http://localhost:5000/weather?address=pandharpur")
     })
     
 })
+*/
 
 const address = document.querySelector(".input");
 let result = document.querySelector(".result");
@@ -21,6 +22,7 @@ let result = document.querySelector(".result");
 document.querySelector(".btn").addEventListener("click",(event) => {
 
     event.preventDefault(); // V.V.V. Imp 
+    result.textContent = "Loading";
     fetch("http://localhost:5000/weather?address=" + address.value).then(response => {
 
     response.json().then(data => {

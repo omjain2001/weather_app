@@ -23,7 +23,7 @@ document.querySelector(".btn").addEventListener("click",(event) => {
 
     event.preventDefault(); // V.V.V. Imp 
     result.textContent = "Loading";
-    fetch("http://localhost:5000/weather?address=" + address.value).then(response => {
+    fetch("/weather?address=" + address.value).then(response => {
 
     response.json().then(data => {
         

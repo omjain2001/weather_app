@@ -22,7 +22,7 @@ let result = document.querySelector(".result");
 document.querySelector(".btn").addEventListener("click",(event) => {
 
     event.preventDefault(); // V.V.V. Imp 
-    result.textContent = "Loading";
+    result.textContent = "Loading....";
     fetch("/weather?address=" + address.value).then(response => {
 
     response.json().then(data => {

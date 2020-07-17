@@ -10,7 +10,8 @@ const geocode = require("./utils/geoCode.js");
 
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
+
 const file_path = path.join(__dirname);
 const view_path = path.join(__dirname,"/templates/views");
 const partial_path = path.join(__dirname,"/templates/partials");
